@@ -1,0 +1,22 @@
+version: '3'
+services:
+  psql:
+    image: postgres:14
+    container_name: psql
+    ports:
+      - "5432:5432"
+    restart: on-failure
+    environment:
+      POSTGRES_USER: zero
+      POSTGRES_PASSWORD: one
+      POSTGRES_DB: bookshop_db
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+    networks:
+      - postgres
+volumes:
+  database-data:
+
+networks:
+  postgres:
+    driver: bridge

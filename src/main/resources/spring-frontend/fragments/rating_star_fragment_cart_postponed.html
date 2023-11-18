@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <span class="Rating" th:fragment="ratingStar(goldStarCount)">
+        <span th:if="${goldStarCount != null}" class="Rating-stars">
+            <span class="Rating-star Rating-star_view" th:each="goldStar : ${#numbers.sequence(1, goldStarCount)}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
+                    <g>
+                        <g>
+                            <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+            <span class="Rating-star" th:each="emptyStar : ${#numbers.sequence(goldStarCount + 1, 5)}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
+                    <g>
+                        <g>
+                            <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+        </span>
+        <span th:if="${goldStarCount == null}" class="Rating-stars">
+            <span class="Rating-star" th:each="emptyStar : ${#numbers.sequence(1, 5)}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
+                    <g>
+                        <g>
+                            <path fill="#ffc000" d="M9.5 14.925L3.629 18l1.121-6.512L0 6.875l6.564-.95L9.5 0l2.936 5.925 6.564.95-4.75 4.613L15.371 18z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </span>
+        </span>
+    </span>
+</html>

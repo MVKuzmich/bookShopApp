@@ -1,0 +1,2 @@
+ALTER TABLE book_rates
+    ADD user_id INT NOT NULL DEFAULT 1000;

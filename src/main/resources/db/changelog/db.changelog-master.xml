@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.9.xsd">
+
+    <include file="db/changelog/changeset/create-tables.xml"/>
+    <include file="db/changelog/changeset/insert-data-authors.xml"/>
+    <include file="db/changelog/changeset/insert-data-book2author.xml"/>
+    <include file="db/changelog/changeset/insert-data-book2user.xml"/>
+    <include file="db/changelog/changeset/insert-data-book2user_type.xml"/>
+    <include file="db/changelog/changeset/insert-data-books.xml"/>
+    <include file="db/changelog/changeset/insert-data-users.xml"/>
+    <include file="db/changelog/changeset/insert-data-tags.xml"/>
+    <include file="db/changelog/changeset/insert-data-book2tag.xml"/>
+    <include file="db/changelog/changeset/insert-data-genres.xml"/>
+    <include file="db/changelog/changeset/insert-data-book2genre.xml"/>
+    <include file="db/changelog/changeset/insert-data-book_file.xml"/>
+    <include file="db/changelog/changeset/insert-data-book_rates.xml"/>
+    <include file="db/changelog/changeset/insert-data-book_review.xml"/>
+    <include file="db/changelog/changeset/insert-data-book_review_like.xml"/>
+    <include file="db/changelog/changeset/insert-data-user_contact.xml"/>
+    <include file="db/changelog/changeset/insert-data-book_file_type.xml"/>
+    <include file="db/changelog/changeset/create-table-jwt_tokens.xml"/>
+    <include file="db/changelog/changeset/book_rates_add_column.xml"/>
+
+
+
+
+</databaseChangeLog>
